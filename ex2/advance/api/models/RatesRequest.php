@@ -33,18 +33,18 @@ class RatesRequest extends Model
 	{
 		
 		$json_rates = [
-            'status' => 'success',
-            'code' => 200,
-            'data' => [],
-        ];
+            		'status' => 'success',
+         		'code' => 200,
+            		'data' => [],
+        	];
 
-        $json_error = [
+        	$json_error = [
 
-            'status' => 'error',
-            'code' => 403,
-            'message' => 'Invalid token',
+            		'status' => 'error',
+            		'code' => 403,
+            		'message' => 'Invalid token',
 
-        ];
+        	];
 
 		if ($this->selectedCur == 'all') {
 			foreach ($this->ticker as $key => $value) {
