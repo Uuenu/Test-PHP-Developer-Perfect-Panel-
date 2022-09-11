@@ -38,7 +38,7 @@ WHERE user_id = users.id)
   ````
   Test-PHP-Developer-Perfect-Panel--main/ex2/advance
   ````
-  3. Запустить Docker
+  3. Запустить Docker desctop
   4. Выполнить в терминале комманду 
   ````
     docker-compose up
