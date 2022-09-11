@@ -33,25 +33,25 @@ class RatesRequest extends Model
 	{
 		
 		$json_rates = [
-            'status' => 'success',
-            'code' => 200,
-            'data' => [],
-        ];
+		    'status' => 'success',
+		    'code' => 200,
+		    'data' => [],
+		];
 
-        $json_error = [
+		$json_error = [
 
-            'status' => 'error',
-            'code' => 403,
-            'message' => 'Invalid token',
+		    'status' => 'error',
+		    'code' => 403,
+		    'message' => 'Invalid token',
 
-        ];
+		];
 
 		if ($this->selectedCur == 'all') {
 			foreach ($this->ticker as $key => $value) {
-           		$json_rates['data'][$key] = round($value['last'] - $value['last'] * self::FEE, 10);
-        	}
-        	asort($json_rates['data']);
-        	return $json_rates;
+           			$json_rates['data'][$key] = round($value['last'] - $value['last'] * self::FEE, 10);
+			}
+			asort($json_rates['data']);
+			return $json_rates;
 		}else{
 			foreach ($this->ticker as $key => $value) {
 				if ($key == $this->selectedCur) {
