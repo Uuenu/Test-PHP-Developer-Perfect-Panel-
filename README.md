@@ -51,7 +51,7 @@ WHERE user_id = users.id)
 
 Формат запросов к API: 
 ````
-localhost:20080/method=<method_name>&<parameter>=<value> 
+localhost:20080?method=<method_name>&<parameter>=<value> 
 ````
 </br>
 
